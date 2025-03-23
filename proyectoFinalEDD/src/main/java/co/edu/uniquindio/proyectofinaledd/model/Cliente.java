@@ -3,6 +3,8 @@ package co.edu.uniquindio.proyectofinaledd.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -23,17 +25,17 @@ public class Cliente {
     private Rango rango;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Transacción> transacciones;
+    private List<Transaccion> transacciones;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Monedero> monederos;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<TransacciónProgramada> transaccionesProgramadas;
+    private List<TransaccionProgramada> transaccionesProgramadas;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Puntos> puntosList;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Notificación> notificaciones;
+    private List<Notificacion> notificaciones;
 }
