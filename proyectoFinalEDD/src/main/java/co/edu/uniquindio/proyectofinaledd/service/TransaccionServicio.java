@@ -2,6 +2,7 @@ package co.edu.uniquindio.proyectofinaledd.service;
 
 import co.edu.uniquindio.proyectofinaledd.model.Transaccion;
 import co.edu.uniquindio.proyectofinaledd.repository.TransaccionRepositorio;
+import co.edu.uniquindio.proyectofinaledd.service.interfaces.ITransaccionServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

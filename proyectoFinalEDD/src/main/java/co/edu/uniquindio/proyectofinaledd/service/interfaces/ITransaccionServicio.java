@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyectofinaledd.service;
+package co.edu.uniquindio.proyectofinaledd.service.interfaces;
 
 import co.edu.uniquindio.proyectofinaledd.model.Transaccion;
 

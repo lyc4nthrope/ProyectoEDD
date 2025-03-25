@@ -2,6 +2,7 @@ package co.edu.uniquindio.proyectofinaledd.service;
 
 import co.edu.uniquindio.proyectofinaledd.model.Cliente;
 import co.edu.uniquindio.proyectofinaledd.repository.ClienteRepositorio;
+import co.edu.uniquindio.proyectofinaledd.service.interfaces.IClienteServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

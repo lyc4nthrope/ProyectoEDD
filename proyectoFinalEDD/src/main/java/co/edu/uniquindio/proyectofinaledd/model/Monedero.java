@@ -24,5 +24,5 @@ public class Monedero {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "monedero", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Transacción> transacciones;
+    private List<Transaccion> transacciones;
 }
