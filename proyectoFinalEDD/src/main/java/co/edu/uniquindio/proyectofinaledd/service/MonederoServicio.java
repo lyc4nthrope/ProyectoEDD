@@ -1,6 +1,6 @@
 package co.edu.uniquindio.proyectofinaledd.service;
 
-import co.edu.uniquindio.proyectofinaledd.model.Monedero;
+import co.edu.uniquindio.proyectofinaledd.model.Cuenta;
 import co.edu.uniquindio.proyectofinaledd.repository.MonederoRepositorio;
 import co.edu.uniquindio.proyectofinaledd.service.interfaces.IMonederoServicio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +14,17 @@ public class MonederoServicio implements IMonederoServicio {
     private MonederoRepositorio monederoRepositorio;
 
     @Override
-    public List<Monedero> listarMonederos() {
+    public List<Cuenta> listarMonederos() {
         return monederoRepositorio.findAll();
     }
 
     @Override
-    public Monedero buscarMonederoPorId(Long id) {
+    public Cuenta buscarMonederoPorId(Long id) {
         return monederoRepositorio.findById(id).orElse(null);
     }
 
     @Override
-    public Monedero guardarMonedero(Monedero monedero) {
+    public Cuenta guardarMonedero(Cuenta monedero) {
         return monederoRepositorio.save(monedero);
     }
 
@@ -34,12 +34,12 @@ public class MonederoServicio implements IMonederoServicio {
     }
 
     @Override
-    public List<Monedero> buscarMonederosPorCliente(Long clienteId) {
+    public List<Cuenta> buscarMonederosPorCliente(Long clienteId) {
         return monederoRepositorio.findByClienteId(clienteId);
     }
 
     @Override
-    public List<Monedero> buscarMonederosPorNombre(String nombre) {
+    public List<Cuenta> buscarMonederosPorNombre(String nombre) {
         return monederoRepositorio.findByNombre(nombre);
     }
 }

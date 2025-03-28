@@ -27,5 +27,5 @@ public class Transaccion {
 
     @ManyToOne
     @JoinColumn(name = "monedero_id")
-    private Monedero monedero;
+    private Cuenta monedero;
 }

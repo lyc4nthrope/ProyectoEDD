@@ -3,7 +3,7 @@ package co.edu.uniquindio.proyectofinaledd.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -11,16 +11,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class TransaccionProgramada {
+public class Cuenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tipo; // Depósito, Retiro, Transferencia
-    private Double monto;
-    private LocalDateTime fechaProgramada;
+    private String nombre;
+    private Double saldo;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+    @OneToMany(mappedBy = "monedero", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Transaccion> transacciones;
 }

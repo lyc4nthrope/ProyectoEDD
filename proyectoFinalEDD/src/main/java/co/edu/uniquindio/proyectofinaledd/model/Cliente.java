@@ -28,7 +28,7 @@ public class Cliente {
     private List<Transaccion> transacciones;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Monedero> monederos;
+    private List<Cuenta> monederos;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TransaccionProgramada> transaccionesProgramadas;
